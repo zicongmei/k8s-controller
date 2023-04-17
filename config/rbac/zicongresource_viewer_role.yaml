@@ -1,0 +1,27 @@
+# permissions for end users to view zicongresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: zicongresource-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: k8s-controller
+    app.kubernetes.io/part-of: k8s-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: zicongresource-viewer-role
+rules:
+- apiGroups:
+  - group1.zicong.k8s.com
+  resources:
+  - zicongresources
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - group1.zicong.k8s.com
+  resources:
+  - zicongresources/status
+  verbs:
+  - get

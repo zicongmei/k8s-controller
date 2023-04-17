@@ -1,0 +1,12 @@
+apiVersion: group1.zicong.k8s.com/v1
+kind: ZicongResource
+metadata:
+  labels:
+    app.kubernetes.io/name: zicongresource
+    app.kubernetes.io/instance: zicongresource-sample
+    app.kubernetes.io/part-of: k8s-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: k8s-controller
+  name: zicongresource-sample
+spec:
+  # TODO(user): Add fields here
